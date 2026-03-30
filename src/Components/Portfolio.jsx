@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ProjectsGallery from "./ProjectsGallery";
+import ContactForm from "./ContactForm";
 
 const projects = [
   {
@@ -9,6 +11,14 @@ const projects = [
       "Full‑stack AI career platform using Gemini AI for intelligent resume suggestions and job recommendations.",
     tags: ["React", "Node.js", "Tailwind", "Gemini AI"],
     link: "https://github.com/Nimrazulfiqar-002/job-ease-client",
+  },
+    {
+    id: 1,
+    title: "CMS-Dashboard UI",
+    description:
+      "A clean and modern Admin Dashboard Table UI built using HTML, CSS, and JavaScript, designed pixel-perfect according to a Figma design.",
+    tags: ["html", "CSS", "Js","Figma-Pixel-Perfect"],
+    link: "https://nimrazulfiqar-002.github.io/CMS-Dashboard/",
   },
   {
     id: 2,
@@ -85,9 +95,15 @@ export default function Portfolio() {
             <motion.div initial={{ opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
               <p className="text-sm text-indigo-600 font-medium">Hello, I&apos;m</p>
               <h2 className="mt-2 text-4xl md:text-5xl font-extrabold leading-tight">Nimra Zulfiqar</h2>
-              <p className="mt-4 text-gray-700 max-w-xl">
+              {/* <p className="mt-4 text-gray-700 max-w-xl">
                 Passionate Software Engineer focused on Frontend side  crafting clean, interactive, and AI‑enhanced web interfaces using React.js and Tailwind CSS. I bring together strong problem‑solving, Agile collaboration, and UI/UX design skills.
-              </p>
+              </p> */}
+              <motion.p className="mt-4 text-gray-700 max-w-xl"
+>
+ I am an independent and self-motivated Software Engineer pursuing a BS in Software Engineering at Sindh Madressatul Islam University, Karachi. I specialize in building responsive, user-centric web applications using React.js, JavaScript (ES6+), and Tailwind CSS. <br /><br />
+ My focus is on scalable architecture, modern UI/UX design, and AI-driven solutions. I have hands-on experience integrating EmailJS for seamless email communication and leveraging AI technologies such as the Gemini API to develop intelligent and dynamic web applications.
+</motion.p>
+
 
               <div className="mt-6 flex gap-4">
                 <a href="#projects" className="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-3 rounded-lg shadow hover:shadow-lg transform hover:-translate-y-0.5 transition">View Projects</a>
@@ -96,6 +112,12 @@ export default function Portfolio() {
             </motion.div>
           </div>
         </section>
+
+        {/* PROJECT GALLERY */}
+        <section id="projects" className="mt-12">
+          {/* <motion.h3 className="text-2xl font-bold" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>Projects</motion.h3> */}
+          <ProjectsGallery/>
+          </section>
 
         {/* PROJECTS */}
         <section id="projects" className="mt-12">
@@ -122,7 +144,14 @@ export default function Portfolio() {
         <section id="about" className="mt-16 bg-gradient-to-tr from-white to-gray-50 rounded-2xl p-8">
           <motion.h3 className="text-2xl font-bold mb-4" initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }}>About Me</motion.h3>
           <motion.p className="text-gray-700" initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.12 } }}>
-            I am an independent and self‑motivated Software Engineer pursuing a BS in Software Engineering at Sindh Madressatul Islam University, Karachi. I specialize in building responsive, user‑centric web applications using React.js, JavaScript (ES6+), and Tailwind CSS. My focus is on scalable architecture, UI/UX design, and AI‑integrated solutions.
+           I am an independent and self-motivated Software Engineer pursuing a BS in Software Engineering at Sindh Madressatul Islam University, Karachi. I specialize in building responsive, user-centric web applications using React.js, JavaScript (ES6+), and Tailwind CSS.
+  <br /><br />
+   My focus is on scalable architecture, modern UI/UX design, and AI-driven solutions. I have hands-on experience integrating EmailJS for seamless email communication and leveraging AI technologies such as the Gemini API to develop intelligent and dynamic web applications.  
+                <br /><br />
+  Additionally, I have completed two internships to strengthen my professional experience: 
+  <br /><br /> 
+  <b>-Web Development Intern at BehinDev (April 2024 – June 2024)</b> <br /> Where I contributed to building and maintaining responsive web applications.  <br /><br />
+  <b>UI/UX Design Intern (January 2026 – March 2026)</b> <br/> Where I worked on designing user-centric interfaces and improving user experience across projects.
           </motion.p>
         </section>
 
@@ -132,23 +161,13 @@ export default function Portfolio() {
           <motion.p className="text-gray-600 mt-2 max-w-xl">Reach out for collaborations, freelance projects, or full‑time opportunities.</motion.p>
 
           <div className="mt-6 grid md:grid-cols-2 gap-6">
-            <motion.form className="bg-white p-6 rounded-lg shadow-sm" initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.08 } }} onSubmit={(e) => e.preventDefault()}>
-              <label className="text-sm text-gray-700">Your Name</label>
-              <input className="border rounded-md px-3 py-2 w-full" placeholder="Your name" />
 
-              <label className="text-sm text-gray-700 mt-3">Email</label>
-              <input className="border rounded-md px-3 py-2 w-full" placeholder="your@email.com" />
+              <ContactForm/>
 
-              <label className="text-sm text-gray-700 mt-3">Message</label>
-              <textarea className="border rounded-md px-3 py-2 h-28 w-full" placeholder="Type your message..." />
-
-              <button type="submit" className="mt-4 px-4 py-2 rounded-md bg-indigo-600 text-white w-full">Send Message</button>
-            </motion.form>
 
             <motion.div className="p-6 rounded-lg bg-gradient-to-tr from-indigo-50 to-pink-50" initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.12 } }}>
               <h4 className="font-semibold">Quick Info</h4>
               <p className="mt-2 text-sm text-gray-700">Karachi, Pakistan — nimrazulfiqar002@gmail.com</p>
-              <p className="mt-2 text-sm text-gray-700">Phone: 0334‑3649032</p>
               
               <div className="mt-6">
                 <h5 className="text-sm font-medium">Social Links</h5>
