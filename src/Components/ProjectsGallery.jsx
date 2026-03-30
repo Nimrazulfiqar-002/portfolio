@@ -3,45 +3,45 @@ import { useEffect, useRef, useState } from "react";
 const projects = [
   {
     title: "CMS Dashboard",
-    image: "/public/Images/cms-1.PNG",
+    image: "/Images/cms-1.PNG",
     github: "https://github.com/Nimrazulfiqar-002/CMS-Dashboard",
     live: "https://nimrazulfiqar-002.github.io/CMS-Dashboard/",
   },
   {
     title: "Cake Bliss",
-    image: "/public/Images/cakebliss.PNG",
+    image: "/Images/cakebliss.PNG",
     github: "https://github.com/Nimrazulfiqar-002/Bakery-website",
     live: "https://bakery-website-rho.vercel.app/",
   },
   {
     title: "Landing page",
-    image: "/public/Images/landing-page.PNG",
+    image: "/Images/landing-page.PNG",
     github: "https://github.com/Nimrazulfiqar-002/landing-page",
   },
   {
     title: "Hair Care App",
-    image: "/public/Images/Hair-care.PNG",
+    image: "/Images/Hair-care.PNG",
     github: "https://github.com/Nimrazulfiqar-002/hair-care-app",
   },
   {
     title: "Login form",
-    image: "/public/Images/loginformreact.PNG",
+    image: "/Images/loginformreact.PNG",
     github: "https://github.com/Nimrazulfiqar-002/aesthetic-login-form-react.js",
   },
   {
     title: "Wana agency-hackton-project",
-    image: "/public/Images/wanna.PNG",
+    image: "/Images/wanna.PNG",
     github: "https://github.com/Nimrazulfiqar-002/hackton-project",
     live: "https://nimrazulfiqar-002.github.io/hackton-project/",
   },
   {
     title: "Card Component design",
-    image: "/public//Images/cardComp.png",
+    image: "/Images/cardComp.png",
     github: "https://github.com/Nimrazulfiqar-002/react-practice",
   },
   {
     title: "Like And DisLike Component Design",
-    image: "/public/Images/likeDislikeComp.png",
+    image: "/Images/likeDislikeComp.png",
     github: "https://github.com/Nimrazulfiqar-002/react-practice",
   },
 ];
